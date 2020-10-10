@@ -11,16 +11,17 @@
 Option Infer Off
 Option Strict On
 Option Explicit On
-Public Class UniversalPrimaryEducation
+<Serializable()> Public Class UniversalPrimaryEducation
     Inherits MillieniumGoals
 
 
     Private _Schoolfees As Double
     Private _Age As Integer
-    Private _Enrolment As Integer
+    Private _Enrolment As Double
+    Private _ChildPop As Double
 
-    Public Sub New(nY As Integer, population As Integer, CountryName As String)
-        MyBase.New(nY, population, CountryName)
+    Public Sub New(nY As Integer)
+        MyBase.New(nY)
     End Sub
 
     Public Property Schoolfees As Double
@@ -28,23 +29,27 @@ Public Class UniversalPrimaryEducation
             Return _Schoolfees
         End Get
         Set(value As Double)
-            If (value < 0) Then
-                _Schoolfees = value * -1
-            Else
-                _Schoolfees = value
-            End If
+            _Schoolfees = ValidateDouble(value)
         End Set
     End Property
 
-    Public Property Enrolment As Integer
+    Public Property Enrolment As Double
         Get
             Return _Enrolment
         End Get
-        Set(value As Integer)
-            _Enrolment = validateData(value)
+        Set(value As Double)
+            _Enrolment = ValidateDouble(value)
         End Set
     End Property
 
+    Public Property ChildPop As Double
+        Get
+            Return _ChildPop
+        End Get
+        Set(value As Double)
+            _ChildPop = ValidateDouble(value)
+        End Set
+    End Property
 
     Public Property Age As Integer
         Get
@@ -55,13 +60,35 @@ Public Class UniversalPrimaryEducation
         End Set
     End Property
 
+    Private Function CheckChildPop() As Boolean
+        If Convert(_ChildPop) <= Convert(Population) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Function EnrollmentRate() As Double
+        If CheckChildPop() Then
+            Return (Convert(_Enrolment) / Convert(_ChildPop)) * 100
+        End If
+    End Function
+
+    Public Function FindNonSchoolGoingChild() As Double
+        If CheckChildPop() Then
+            Return Convert(_ChildPop - _Enrolment)
+        End If
+    End Function
+
     Public Overrides Function Display() As String
         Dim temp As String
-        temp = "Country name : " & CountryName & Environment.NewLine
-        temp &= "Initial Popolation : " & Population & Environment.NewLine
-        ' temp &= "Country funding eligibility : " & FundingEligibility() & Environment.NewLin
+        temp = MyBase.Display()
+        temp &= "Country funding eligibility : " & FundingEligibility() & Environment.NewLine
+        temp &= "Enrollment Rate: " & Format(EnrollmentRate(), "0.0") & "%" & Environment.NewLine
+        temp &= "Number of children not at school: " & Format(FindNonSchoolGoingChild(), "0") & Environment.NewLine
         Return temp
 
     End Function
+
 
 End Class

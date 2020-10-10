@@ -22,133 +22,113 @@ Partial Class frmMilliennium
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.btnStart = New System.Windows.Forms.Button()
-        Me.txtDisplyExtr = New System.Windows.Forms.TextBox()
-        Me.txtnYears = New System.Windows.Forms.TextBox()
-        Me.txtDisplyUniv = New System.Windows.Forms.TextBox()
-        Me.txtnCounrties = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtnCounrties = New System.Windows.Forms.TextBox()
+        Me.txtDisplyUniv = New System.Windows.Forms.TextBox()
+        Me.txtnYears = New System.Windows.Forms.TextBox()
+        Me.txtDisplyData = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.BtnDisplayList = New System.Windows.Forms.Button()
+        Me.BtnDisplay = New System.Windows.Forms.Button()
+        Me.BtnSaveInfo = New System.Windows.Forms.Button()
+        Me.BtnSummary = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(573, 102)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(400, 102)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(228, 102)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(51, 102)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'btnStart
-        '
-        Me.btnStart.Location = New System.Drawing.Point(228, 65)
-        Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(203, 31)
-        Me.btnStart.TabIndex = 5
-        Me.btnStart.Text = "Start"
-        Me.btnStart.UseVisualStyleBackColor = True
-        '
-        'txtDisplyExtr
-        '
-        Me.txtDisplyExtr.Location = New System.Drawing.Point(51, 170)
-        Me.txtDisplyExtr.Multiline = True
-        Me.txtDisplyExtr.Name = "txtDisplyExtr"
-        Me.txtDisplyExtr.ReadOnly = True
-        Me.txtDisplyExtr.Size = New System.Drawing.Size(268, 234)
-        Me.txtDisplyExtr.TabIndex = 9
-        '
-        'txtnYears
-        '
-        Me.txtnYears.Location = New System.Drawing.Point(400, 2)
-        Me.txtnYears.Name = "txtnYears"
-        Me.txtnYears.Size = New System.Drawing.Size(31, 20)
-        Me.txtnYears.TabIndex = 10
-        '
-        'txtDisplyUniv
-        '
-        Me.txtDisplyUniv.Location = New System.Drawing.Point(400, 170)
-        Me.txtDisplyUniv.Multiline = True
-        Me.txtDisplyUniv.Name = "txtDisplyUniv"
-        Me.txtDisplyUniv.ReadOnly = True
-        Me.txtDisplyUniv.Size = New System.Drawing.Size(248, 234)
-        Me.txtDisplyUniv.TabIndex = 13
-        '
-        'txtnCounrties
-        '
-        Me.txtnCounrties.Location = New System.Drawing.Point(400, 28)
-        Me.txtnCounrties.Name = "txtnCounrties"
-        Me.txtnCounrties.Size = New System.Drawing.Size(31, 20)
-        Me.txtnCounrties.TabIndex = 14
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(286, 199)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Number of years"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(235, 5)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Number of years"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(294, 207)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 13)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Number of years"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(235, 31)
+        Me.Label4.Location = New System.Drawing.Point(214, 33)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(103, 13)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Number of Countries"
+        '
+        'txtnCounrties
+        '
+        Me.txtnCounrties.Location = New System.Drawing.Point(379, 30)
+        Me.txtnCounrties.Name = "txtnCounrties"
+        Me.txtnCounrties.Size = New System.Drawing.Size(31, 20)
+        Me.txtnCounrties.TabIndex = 27
+        '
+        'txtDisplyUniv
+        '
+        Me.txtDisplyUniv.Location = New System.Drawing.Point(379, 172)
+        Me.txtDisplyUniv.Multiline = True
+        Me.txtDisplyUniv.Name = "txtDisplyUniv"
+        Me.txtDisplyUniv.ReadOnly = True
+        Me.txtDisplyUniv.Size = New System.Drawing.Size(248, 234)
+        Me.txtDisplyUniv.TabIndex = 26
+        '
+        'txtnYears
+        '
+        Me.txtnYears.Location = New System.Drawing.Point(379, 4)
+        Me.txtnYears.Name = "txtnYears"
+        Me.txtnYears.Size = New System.Drawing.Size(31, 20)
+        Me.txtnYears.TabIndex = 25
+        '
+        'txtDisplyData
+        '
+        Me.txtDisplyData.Location = New System.Drawing.Point(30, 172)
+        Me.txtDisplyData.Multiline = True
+        Me.txtDisplyData.Name = "txtDisplyData"
+        Me.txtDisplyData.ReadOnly = True
+        Me.txtDisplyData.Size = New System.Drawing.Size(268, 234)
+        Me.txtDisplyData.TabIndex = 24
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(214, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 13)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Number of years"
+        '
+        'btnStart
+        '
+        Me.btnStart.Location = New System.Drawing.Point(207, 67)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(203, 31)
+        Me.btnStart.TabIndex = 22
+        Me.btnStart.Text = "Start"
+        Me.btnStart.UseVisualStyleBackColor = True
+        '
+        'BtnDisplayList
+        '
+        Me.BtnDisplayList.Location = New System.Drawing.Point(30, 104)
+        Me.BtnDisplayList.Name = "BtnDisplayList"
+        Me.BtnDisplayList.Size = New System.Drawing.Size(142, 34)
+        Me.BtnDisplayList.TabIndex = 21
+        Me.BtnDisplayList.Text = "Display Eligible Countries List"
+        Me.BtnDisplayList.UseVisualStyleBackColor = True
+        '
+        'BtnDisplay
+        '
+        Me.BtnDisplay.Location = New System.Drawing.Point(207, 104)
+        Me.BtnDisplay.Name = "BtnDisplay"
+        Me.BtnDisplay.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDisplay.TabIndex = 20
+        Me.BtnDisplay.Text = "Display Info"
+        Me.BtnDisplay.UseVisualStyleBackColor = True
+        '
+        'BtnSaveInfo
+        '
+        Me.BtnSaveInfo.Location = New System.Drawing.Point(379, 104)
+        Me.BtnSaveInfo.Name = "BtnSaveInfo"
+        Me.BtnSaveInfo.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSaveInfo.TabIndex = 19
+        Me.BtnSaveInfo.Text = "Save Data"
+        Me.BtnSaveInfo.UseVisualStyleBackColor = True
+        '
+        'BtnSummary
+        '
+        Me.BtnSummary.Location = New System.Drawing.Point(552, 104)
+        Me.BtnSummary.Name = "BtnSummary"
+        Me.BtnSummary.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSummary.TabIndex = 18
+        Me.BtnSummary.Text = "Summary"
+        Me.BtnSummary.UseVisualStyleBackColor = True
         '
         'frmMilliennium
         '
@@ -156,35 +136,32 @@ Partial Class frmMilliennium
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(656, 410)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtnCounrties)
         Me.Controls.Add(Me.txtDisplyUniv)
         Me.Controls.Add(Me.txtnYears)
-        Me.Controls.Add(Me.txtDisplyExtr)
+        Me.Controls.Add(Me.txtDisplyData)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnStart)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.BtnDisplayList)
+        Me.Controls.Add(Me.BtnDisplay)
+        Me.Controls.Add(Me.BtnSaveInfo)
+        Me.Controls.Add(Me.BtnSummary)
         Me.Name = "frmMilliennium"
         Me.Text = "Milliennium Goals"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents btnStart As Button
-    Friend WithEvents txtDisplyExtr As TextBox
-    Friend WithEvents txtnYears As TextBox
-    Friend WithEvents txtDisplyUniv As TextBox
-    Friend WithEvents txtnCounrties As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+
     Friend WithEvents Label4 As Label
+    Friend WithEvents txtnCounrties As TextBox
+    Friend WithEvents txtDisplyUniv As TextBox
+    Friend WithEvents txtnYears As TextBox
+    Friend WithEvents txtDisplyData As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btnStart As Button
+    Friend WithEvents BtnDisplayList As Button
+    Friend WithEvents BtnDisplay As Button
+    Friend WithEvents BtnSaveInfo As Button
+    Friend WithEvents BtnSummary As Button
 End Class

@@ -11,15 +11,15 @@
 Option Infer Off
 Option Strict On
 Option Explicit On
-Public Class ExtremeProverty_and_Hunger
+<Serializable()> Public Class ExtremeProverty_and_Hunger
     Inherits MillieniumGoals
 
     Private _Salarylessthan2D As Double
     Private _PovertyRate As Integer
 
 
-    Public Sub New(nY As Integer, population As Integer, CountryName As String)
-        MyBase.New(nY, population, CountryName)
+    Public Sub New(nY As Integer)
+        MyBase.New(nY)
     End Sub
 
     Public Property Salary As Double
@@ -27,11 +27,7 @@ Public Class ExtremeProverty_and_Hunger
             Return _Salarylessthan2D
         End Get
         Set(value As Double)
-            If (value < 0) Then
-                _Salarylessthan2D = value * -1
-            Else
-                _Salarylessthan2D = value
-            End If
+            _Salarylessthan2D = ValidateDouble(value)
         End Set
     End Property
 
@@ -49,12 +45,10 @@ Public Class ExtremeProverty_and_Hunger
         Select Case _Salarylessthan2D
             Case Is <= 10000000
                 PovertyRate = 5
-            Case 10000000 To 20000000
-                PovertyRate = 10
             Case Is > 20000000
                 PovertyRate = 25
             Case Else
-                PovertyRate = 1
+                PovertyRate = 10
         End Select
 
         Return PovertyRate / 100
@@ -62,10 +56,7 @@ Public Class ExtremeProverty_and_Hunger
     Public Function Determinegrowth() As Double
         Return Convert(Population) * (2.71828) ^ (DetermineRate() * Years)
     End Function
-    Public Function Convert(number As Integer) As Long
 
-        Return number * 1000000
-    End Function
 
 
     Public Function CalcFinalpopolation() As Double
@@ -88,8 +79,8 @@ Public Class ExtremeProverty_and_Hunger
 
     Public Overrides Function Display() As String
         Dim temp As String
-        MyBase.Display()
-        temp = "Population Growth : " & Determinegrowth() & Environment.NewLine
+        temp = MyBase.Display
+        temp &= "Population Growth : " & Determinegrowth() & Environment.NewLine
         temp &= CountryName & Analysis() & Environment.NewLine
         temp &= "Country funding eligibility : " & FundingEligibility() & Environment.NewLine
 
