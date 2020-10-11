@@ -1,5 +1,5 @@
 ﻿' *****************************************************************
-' Team Number: assigned to team
+' Team Number: 32
 ' Team Member 1 Details: Ngomane, MJ (216077694)
 ' Team Member 2 Details:Menze ,M (220034828)
 ' Team Member 3 Details: Damoyi, T (220002492)
@@ -14,12 +14,12 @@ Option Explicit On
 <Serializable()> Public Class UniversalPrimaryEducation
     Inherits MillieniumGoals
 
-
+    'The Primary education attributes
     Private _Schoolfees As Double
     Private _Age As Integer
     Private _Enrolment As Double
     Private _ChildPop As Double
-
+    'The constructor
     Public Sub New(nY As Integer)
         MyBase.New(nY)
     End Sub
@@ -59,21 +59,21 @@ Option Explicit On
             _Age = validateData(value)
         End Set
     End Property
-
+    'Checks whether the child population is more than the actual population
     Private Function CheckChildPop() As Boolean
-        If Convert(_ChildPop) <= Convert(Population) Then
+        If Convert(_ChildPop) <= Population Then
             Return True
         Else
             Return False
         End If
     End Function
-
+    'This is the enrollment rate being calculated
     Public Function EnrollmentRate() As Double
         If CheckChildPop() Then
             Return (Convert(_Enrolment) / Convert(_ChildPop)) * 100
         End If
     End Function
-
+    'Finds non-school going children among the child population that should be at school
     Public Function FindNonSchoolGoingChild() As Double
         If CheckChildPop() Then
             Return Convert(_ChildPop - _Enrolment)
