@@ -58,6 +58,7 @@ Public Class frmMilliennium
     End Sub
     'The list of eligible countries will be displayed
     Private Sub BtnDisplayList_Click(sender As Object, e As EventArgs) Handles BtnDisplayList.Click
+        txtDisplyData.Clear()
         txtDisplyData.Text = "List of eligible countries: " & Environment.NewLine
         For i As Integer = 1 To nC
             If objMillienniumgoals(i).FundingEligibility = "Eligible " Then
@@ -87,7 +88,7 @@ Public Class frmMilliennium
             End If
         Next i
         FileS.Close()
-        MsgBox("Data on the eligible countries have been")
+        MsgBox("Data on the eligible countries have been saved.")
     End Sub
 
     Private Sub BtnSummary_Click(sender As Object, e As EventArgs) Handles BtnSummary.Click
