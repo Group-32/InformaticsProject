@@ -5,7 +5,7 @@
 ' Team Member 3 Details: Damoyi, T (220002492)
 ' Team Member 4 Details: Maholobela,ZA(220045302)
 ' Practical: Team Project
-' Class name: ExtremeProverty_and_Hunger
+' Class name: frmMillennium
 ' *****************************************************************
 
 Option Infer Off
